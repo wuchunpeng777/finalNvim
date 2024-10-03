@@ -1,9 +1,17 @@
 return {
-    'zaldih/themery.nvim',
+    "zaldih/themery.nvim",
+    command = "Themery",
     config = function()
+        local available_colorschemes = vim.fn.getcompletion("", "color")
+        local colorschemes = {}
+        for _, colorscheme in ipairs(available_colorschemes) do
+            table.insert(colorschemes, colorscheme)
+        end
+
         require("themery").setup({
-            themes = {'onedark'}, -- Your list of installed colorschemes.
-            livePreview = true -- Apply theme while picking. Default to true.
+            themes = colorschemes
         })
-    end
+    end,
+    lazy = false,
+    priority = 900
 }
