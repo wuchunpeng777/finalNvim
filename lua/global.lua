@@ -143,11 +143,11 @@ vim.opt.hlsearch = true
 vim.o.autoread = true
 vim.bo.autoread = true
 
-if vim.fn.has "win32" == 1 then
-    vim.o.guifont = "JetBrainsMono Nerd Font:h12"
-elseif vim.fn.has "mac" == 1 then
-    vim.o.guifont = "JetBrainsMono Nerd Font:h16"
-end
+-- if vim.fn.has "win32" == 1 then
+--     vim.o.guifont = "JetBrainsMono Nerd Font:h12"
+-- elseif vim.fn.has "mac" == 1 then
+--     vim.o.guifont = "JetBrainsMono Nerd Font:h16"
+-- end
 
 -- vim.api.nvim_create_augroup("nobg", { clear = true })
 -- vim.api.nvim_create_autocmd({ "ColorScheme" }, {
