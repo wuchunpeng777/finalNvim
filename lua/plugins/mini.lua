@@ -65,5 +65,7 @@ return {
         vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniFiles.open()<cr>')
 
         require('mini.cursorword').setup()
+
+        require('mini.indentscope').setup()
     end
 }
