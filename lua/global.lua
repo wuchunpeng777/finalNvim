@@ -161,3 +161,17 @@ vim.bo.autoread = true
 --     -- etc...
 --   end,
 -- })
+
+-- local wk = require("which-key")
+-- wk.add({{
+--     mode = {"n"},
+--     {
+--         "<leader>n",
+--         "<cmd>enew<CR>",
+--         desc = "NewBuffer"
+--     }
+-- }})
+
+vim.keymap.set('n', '<leader>n', '<cmd>enew<CR>', {
+    desc = "NewBuffer"
+})
