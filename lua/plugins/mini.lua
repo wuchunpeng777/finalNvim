@@ -62,10 +62,49 @@ return {
         require('mini.surround').setup()
 
         require('mini.files').setup({})
-        vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniFiles.open()<cr>')
+        vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniFiles.open()<cr>', {
+            desc = 'Open Mini Files'
+        })
 
         require('mini.cursorword').setup()
 
         require('mini.indentscope').setup()
+
+        require('mini.sessions').setup()
+        local save_session = function()
+            vim.ui.input({
+                prompt = "session name: "
+            }, function(input)
+                if input == nil then
+                    return
+                end
+                local mini_sessions = require('mini.sessions')
+                mini_sessions.write(input)
+            end)
+        end
+
+        vim.keymap.set("n", "<leader>Ss", save_session, {
+            desc = "Save Session"
+        })
+
+        vim.keymap.set('n', '<leader>Sl', '<cmd>lua MiniSessions.select()<cr>', {
+            desc = 'Select Session'
+        })
+
+        local delete_session = function()
+            vim.ui.input({
+                prompt = "session name: "
+            }, function(input)
+                if input == nil then
+                    return
+                end
+                local mini_sessions = require('mini.sessions')
+                mini_sessions.delete(input)
+            end)
+        end
+
+        vim.keymap.set("n", "<leader>Sd", delete_session, {
+            desc = "Delete Session"
+        })
     end
 }

@@ -2,7 +2,7 @@ return { -- Autoformat
     'stevearc/conform.nvim',
     lazy = false,
     keys = {{
-        '<leader>fk',
+        '<leader>lf',
         function()
             require('conform').format {
                 async = true,

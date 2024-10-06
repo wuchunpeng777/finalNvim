@@ -9,7 +9,7 @@ return {
                     return ''
                 end,
                 dim = 0.18, -- dim the color of `message`
-                cleaning_interval = 1250 -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
+                cleaning_interval = 0 -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
             }
         }
     end
