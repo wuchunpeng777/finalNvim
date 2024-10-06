@@ -43,6 +43,9 @@ return {
         })
 
         require('mini.bufremove').setup()
+        vim.keymap.set('n', '<leader>c', '<cmd>lua MiniBufremove.delete()<cr>', {
+            desc = "Delete Buffer"
+        })
 
         -- Better Around/Inside textobjects
         --
