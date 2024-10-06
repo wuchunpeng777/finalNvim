@@ -7,7 +7,7 @@ return {
         vim.keymap.set({"n", "v"}, "mf", "<cmd>BookmarksGoto<cr>", {
             desc = "Go to bookmark at current active BookmarkList"
         })
-        vim.keymap.set({"n", "v"}, "ma", "<cmd>BookmarksCommands<cr>", {
+        vim.keymap.set({"n", "v"}, "mc", "<cmd>BookmarksCommands<cr>", {
             desc = "Find and trigger a bookmark command."
         })
 
