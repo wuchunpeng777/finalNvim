@@ -1,6 +1,5 @@
 - mini.ai用法
 - nvim-telescope/telescope-fzf-native
-- find buffer
 - pin buffer
 - close right buffers
 - close left buffers
