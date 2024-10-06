@@ -5,7 +5,7 @@ return {
     'MunifTanjim/nui.nvim'},
     config = function()
 
-        vim.keymap.set("n", "<leader>e", ":Neotree toggle<cr>", { silent = true })
+        vim.keymap.set("n", "<leader>e", ":Neotree toggle<cr>", { silent = true ,desc = "Open Explorer"})
 
         -- If you want icons for diagnostic errors, you'll need to define them somewhere:
         vim.fn.sign_define("DiagnosticSignError", {
