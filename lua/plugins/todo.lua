@@ -3,7 +3,7 @@ return {
     event = 'VimEnter',
     dependencies = {'nvim-lua/plenary.nvim'},
     keys = {
-        {"<leader>ft","<cmd>TodoTelescope<cr>"}
+        {"<leader>td","<cmd>TodoTelescope<cr>"}
     },
     opts = {
         signs = false, -- show icons in the signs column
