@@ -7,3 +7,4 @@
 - sort buffer
 - close target buffer
 - session 处理
+- yanky用法
