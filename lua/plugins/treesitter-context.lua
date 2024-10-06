@@ -16,5 +16,12 @@ return {
             zindex = 20, -- The Z-index of the context window
             on_attach = nil -- (fun(buf: integer): boolean) return false to disable attaching
         }
+
+        -- 添加键盘映射以跳转到上下文
+        vim.keymap.set("n", "[c", function()
+            require("treesitter-context").go_to_context(vim.v.count1)
+        end, {
+            silent = true
+        })
     end
 }

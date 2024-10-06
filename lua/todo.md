@@ -7,3 +7,4 @@
 - close other buffers
 - sort buffer
 - close target buffer
+- session 处理
