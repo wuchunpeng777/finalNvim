@@ -1,4 +1,3 @@
---todo
 return {             -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = { -- Automatically install LSPs and related tools to stdpath for Neovim
@@ -92,11 +91,11 @@ return {             -- LSP Configuration & Plugins
 
                 -- Rename the variable under your cursor.
                 --  Most Language Servers support renaming across files, etc.
-                map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+                map('<leader>lr', vim.lsp.buf.rename, '[R]e[n]ame')
 
                 -- Execute a code action, usually your cursor needs to be on top of an error
                 -- or a suggestion from your LSP for this to activate.
-                map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+                map('<leader>la', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
                 -- Opens a popup that displays documentation about the word under your cursor
                 --  See `:help K` for why this keymap.

@@ -1,4 +1,3 @@
---todo
 return { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -148,14 +147,17 @@ return { -- Autocompletion
                     end
                 }
             }),
-            sources = cmp.config.sources({{
+            sources = cmp.config.sources(
+                {{
                 name = "path"
-            }}, {{
+            }}, 
+            {{
                 name = "cmdline",
                 option = {
                     ignore_cmds = {"Man", "!"}
                 }
-            }})
+            }}
+        )
         })
     end
 }
