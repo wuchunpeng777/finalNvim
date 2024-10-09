@@ -94,7 +94,7 @@ vim.o.autoread = true
 vim.bo.autoread = true
 
 if vim.fn.has "win32" == 1 then
-    vim.o.guifont = "JetBrainsMono Nerd Font:h12"
+    vim.o.guifont = "Maple Mono NF CN:h12"
 elseif vim.fn.has "mac" == 1 then
     vim.o.guifont = "Maple Mono NF CN:h16"
 end
