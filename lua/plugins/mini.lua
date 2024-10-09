@@ -73,7 +73,17 @@ return {
 
         require('mini.indentscope').setup()
 
-        require('mini.sessions').setup()
+        require('mini.sessions').setup {
+            hooks = {
+                pre = {
+                    write = function()
+                        vim.api.nvim_exec_autocmds('User', {
+                            pattern = 'SessionSavePre'
+                        })
+                    end
+                }
+            }
+        }
         local save_session = function()
             vim.ui.input({
                 prompt = "session name: "

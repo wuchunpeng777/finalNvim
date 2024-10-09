@@ -6,5 +6,5 @@
 - close other buffers
 - close target buffer
 - auto sort buffer
-- session 处理
 - yanky用法
+- ai用openrouter
