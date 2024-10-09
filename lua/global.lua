@@ -2,6 +2,9 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
+
 vim.opt.tabstop = 4
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 4
@@ -100,3 +103,6 @@ end
 vim.keymap.set('n', '<leader>n', '<cmd>enew<CR>', {
     desc = "NewBuffer"
 })
+
+vim.env.ANTHROPIC_API_KEY = "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"
+-- vim.env.OPENAI_API_KEY = "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"

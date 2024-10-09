@@ -4,7 +4,7 @@
 - close right buffers
 - close left buffers
 - close other buffers
-- sort buffer
 - close target buffer
+- auto sort buffer
 - session 处理
 - yanky用法
