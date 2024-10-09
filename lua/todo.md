@@ -1,3 +1,2 @@
 - mini.ai用法
-- nvim-telescope/telescope-fzf-native
 - ai用openrouter
