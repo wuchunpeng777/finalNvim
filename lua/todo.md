@@ -1,2 +1,1 @@
 - mini.ai用法
-- ai用openrouter
