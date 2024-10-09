@@ -37,6 +37,14 @@ return {
         vim.keymap.set('n', '<leader>c', '<cmd>BufferClose<cr>', {
             desc = 'Close Buffer'
         })
+
+        vim.keymap.set('n', '<leader>bb', '<cmd>BufferPick<cr>', {
+            desc = 'Pick Buffer'
+        })
+
+        vim.keymap.set('n', '<leader>bd', '<cmd>BufferPickDelete<cr>', {
+            desc = 'Pick Buffer Delete'
+        })
     end,
     opts = {
         -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
