@@ -1,5 +1,3 @@
 - mini.ai用法
 - nvim-telescope/telescope-fzf-native
-- auto sort buffer
-- yanky用法
 - ai用openrouter
