@@ -19,11 +19,35 @@ return {
         vim.keymap.set('n', '>b', '<cmd>BufferMoveNext<cr>', {
             desc = 'Move Buffer Next'
         })
+
+        vim.keymap.set('n', '<leader>bp', '<cmd>BufferPin<cr>', {
+            desc = 'Pin Buffer'
+        })
+        vim.keymap.set('n', '<leader>bc', '<cmd>BufferCloseAllButCurrent<cr>', {
+            desc = 'Close All But Current Buffer'
+        })
+
+        vim.keymap.set('n', '<leader>bl', '<cmd>BufferCloseBuffersLeft<cr>', {
+            desc = 'Close All Left Buffers'
+        })
+        vim.keymap.set('n', '<leader>br', '<cmd>BufferCloseBuffersRight<cr>', {
+            desc = 'Close All Right Buffers'
+        })
+
+        vim.keymap.set('n', '<leader>c', '<cmd>BufferClose<cr>', {
+            desc = 'Close Buffer'
+        })
     end,
     opts = {
         -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
         -- animation = true,
         -- insert_at_start = true,
         -- …etc.
-    },
+        icons = {
+            pinned = {
+                button = '',
+                filename = true
+            }
+        }
+    }
 }
