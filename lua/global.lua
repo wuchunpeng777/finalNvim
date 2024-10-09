@@ -106,5 +106,4 @@ vim.keymap.set('n', '<leader>n', '<cmd>enew<CR>', {
 
 vim.opt.sessionoptions:append 'globals'
 
--- vim.env.ANTHROPIC_API_KEY = "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"
--- vim.env.OPENAI_API_KEY = "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"
+vim.env.OPENAI_API_KEY = "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"
