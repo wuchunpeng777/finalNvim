@@ -60,9 +60,15 @@ return {
         require('mini.surround').setup()
 
         require('mini.files').setup({})
-        vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniFiles.open()<cr>', {
-            desc = 'Open Mini Files'
-        })
+        local MiniFiles = require("mini.files")
+        vim.keymap.set("n", "<leader>fi", function()
+            if MiniFiles.get_explorer_state() == nil or MiniFiles.get_explorer_state().target_window == nil then
+                MiniFiles.open(vim.api.nvim_buf_get_name(0))
+            end
+        end)
+        -- vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniFiles.open()<cr>', {
+        --     desc = 'Open Mini Files'
+        -- })
 
         require('mini.cursorword').setup()
 
