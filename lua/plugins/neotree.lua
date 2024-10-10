@@ -380,5 +380,6 @@ return {
             }
         })
 
+        -- _G.neotree_follow_current_file_status = true
     end
 }
