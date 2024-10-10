@@ -56,6 +56,9 @@ return {
                 button = '',
                 filename = true
             }
-        }
+        },
+        sidebar_filetypes = {
+			['neo-tree'] = true
+		}
     }
 }
