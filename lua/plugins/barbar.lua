@@ -58,7 +58,7 @@ return {
             }
         },
         sidebar_filetypes = {
-			['neo-tree'] = true
+            ['neo-tree'] = {event = 'BufWipeout'},
 		}
     }
 }
