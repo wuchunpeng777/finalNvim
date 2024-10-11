@@ -288,5 +288,9 @@ return {
             require("flash").jump()
         end,
         desc = "Flash"
-    }}
+    }},
+    config = function(_, opts)
+        vim.cmd('hi FlashLabel guifg=#FF00FF')
+        require("flash").setup(opts)
+    end
 }
