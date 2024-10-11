@@ -4,6 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 3
+vim.opt.splitkeep = "screen"
 
 vim.opt.tabstop = 4
 vim.opt.smartindent = true
