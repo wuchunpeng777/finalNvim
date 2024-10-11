@@ -33,7 +33,7 @@ return {
                 laststatus = 0 -- turn off the statusline in zen mode
             },
             twilight = {
-                enabled = true
+                enabled = false
             }, -- enable to start Twilight when zen mode opens
             gitsigns = {
                 enabled = false
