@@ -6,6 +6,8 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.laststatus = 3
 vim.opt.splitkeep = "screen"
 
+vim.g.neovide_scroll_animation_length = 0.3
+
 vim.opt.tabstop = 4
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 4
