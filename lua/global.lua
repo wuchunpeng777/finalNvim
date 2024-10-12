@@ -75,9 +75,9 @@ vim.opt.splitbelow = true
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = {
-    tab = '» ',
-    trail = '·',
-    nbsp = '␣'
+	tab = '» ',
+	trail = '·',
+	nbsp = '␣'
 }
 
 -- Preview substitutions live, as you type!
@@ -89,28 +89,41 @@ vim.opt.cursorline = true
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', {
-    desc = "ClearSearch"
+	desc = "ClearSearch"
 })
-
 
 vim.o.autoread = true
 vim.bo.autoread = true
 
 if vim.fn.has "win32" == 1 then
-    vim.o.guifont = "Maple Mono NF CN:h12"
+	vim.o.guifont = "Maple Mono NF CN:h12"
 elseif vim.fn.has "mac" == 1 then
-    vim.o.guifont = "Maple Mono NF CN:h16"
+	vim.o.guifont = "Maple Mono NF CN:h16"
 end
 
-
 vim.keymap.set('n', '<leader>n', '<cmd>enew<CR>', {
-    desc = "NewBuffer"
+	desc = "NewBuffer"
 })
 
 vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>", {
-    desc = "Quit All"
+	desc = "Quit All"
 })
 
 vim.opt.sessionoptions:append 'globals'
 
 vim.env.OPENAI_API_KEY = "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"
+
+if vim.fn.has "win32" == 1 then
+	local powershell_options = {
+		shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
+		shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+		shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+		shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+		shellquote = "",
+		shellxquote = ""
+	}
+
+	for option, value in pairs(powershell_options) do
+		vim.opt[option] = value
+	end
+end
